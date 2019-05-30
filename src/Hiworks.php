@@ -167,6 +167,14 @@ class Hiworks
         );
     }
 
+    /**
+     * @param $path
+     * @param array $form_params
+     * @param null $access_token
+     * @return mixed
+     * @throws Exceptions\HiworksApiException
+     * @throws HiworksSDKException
+     */
     public function post($path, $form_params=[], $access_token=null)
     {
         if(empty($access_token)){
@@ -176,6 +184,50 @@ class Hiworks
         $hiworks_api_client = $this->getHiworksApiClient();
 
         return $hiworks_api_client->post(
+            $path,
+            $form_params,
+            $access_token
+        );
+    }
+
+    /**
+     * @param $path
+     * @param array $form_params
+     * @param null $access_token
+     * @return mixed
+     * @throws HiworksSDKException
+     */
+    public function put($path, $form_params=[], $access_token=null)
+    {
+        if(empty($access_token)){
+            throw new HiworksSDKException('Required "access_token" key not supplied in Hiworks\Hiworks :: put() third parameter');
+        }
+
+        $hiworks_api_client = $this->getHiworksApiClient();
+
+        return $hiworks_api_client->put(
+            $path,
+            $form_params,
+            $access_token
+        );
+    }
+
+    /**
+     * @param $path
+     * @param array $form_params
+     * @param null $access_token
+     * @return mixed
+     * @throws HiworksSDKException
+     */
+    public function delete($path, $form_params=[], $access_token=null)
+    {
+        if(empty($access_token)){
+            throw new HiworksSDKException('Required "access_token" key not supplied in Hiworks\Hiworks :: delete() third parameter');
+        }
+
+        $hiworks_api_client = $this->getHiworksApiClient();
+
+        return $hiworks_api_client->delete(
             $path,
             $form_params,
             $access_token
