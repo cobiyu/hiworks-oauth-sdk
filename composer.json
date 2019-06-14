@@ -3,7 +3,7 @@
     "type": "library",
     "license": "MIT",
     "description": "Hiworks Oauth SDK for PHP",
-    "keywords": ["facebook", "sdk"],
+    "keywords": ["hiworks", "sdk"],
     "require": {
         "php": ">=5.6",
         "guzzlehttp/guzzle": "^6.3"
