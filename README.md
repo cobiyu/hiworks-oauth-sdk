@@ -41,7 +41,7 @@ $delete_response = $client->delete($path, $access_token)
 ```
 
 ### Exception
--- **Hiworks\Exceptions\HiworksSDKException** : package의 최상위 Exception 
+**Hiworks\Exceptions\HiworksSDKException** : package의 최상위 Exception 
 > 자세한 exception 내용이 필요하다면 , *Hiworks\Exceptions* 참조
 ```php
 catch(HiworksSDKException $e)
