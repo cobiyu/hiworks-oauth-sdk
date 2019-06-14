@@ -30,7 +30,7 @@ $access_token = $client->getAccessToken->getAccessToken($auth_code);
 echo $access_token->getAccessToken();   // print access_toekn (example. fh283nfdsialvcxzvclxzvcxz)
 ```
 
-### Get response Hiworks API using access token
+### Get Hiworks API response using access token
 ```php
 // $path and $access token must be string.
 // api result is object.
